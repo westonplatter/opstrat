@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import yfinance as yf
 
-from .helpers import check_ticker, check_optype, check_trtype, payoff_calculator
+from finx_option_pricer.helpers import check_ticker, check_optype, check_trtype, payoff_calculator
 
 import warnings
 

@@ -2,7 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import warnings
-from .helpers import check_optype, check_trtype
+
+from finx_option_pricer.helpers import check_optype, check_trtype
 
 warnings.filterwarnings("ignore")
 

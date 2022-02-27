@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from .helpers import payoff_calculator, check_optype, check_trtype
+from finx_option_pricer.helpers import payoff_calculator, check_optype, check_trtype
 
 abb = {"c": "Call", "p": "Put", "b": "Long", "s": "Short"}
 
