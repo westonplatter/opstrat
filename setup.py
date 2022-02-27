@@ -1,56 +1,40 @@
 from codecs import open
 import os
 from setuptools import setup, find_packages
-#import pypandoc
 
-with open('README.md') as readme_file:
+# import pypandoc
+
+with open("README.md") as readme_file:
     README = readme_file.read()
 
 
-VERSION = '0.1.7'
-DESCRIPTION = 'Option stategy visualizer'
-#LONG_DESCRIPTION = DESCRIPTION
-URL = 'https://github.com/hashabcd/opstrat'
+VERSION = "0.0.1"
+DESCRIPTION = "Option pricer and visualizer"
+# LONG_DESCRIPTION = DESCRIPTION
+URL = "https://github.com/westonplatter/finx-option-pricer"
+
+deps = [
+    "loguru",
+    "pandas >=1.3.0,<1.4",
+    "numpy",
+    "matplotlib==3.4.2",
+    "pydantic",
+    "requests",
+    "seaborn==0.11.1",
+    "yfinance==0.1.59",
+]
 
 # Setting up
 setup(
-    name="opstrat",
+    name="finx_option_pricer",
     version=VERSION,
-    author="Abhijith Chandradas",
-    author_email="<abhijith.chandradas@gmail.com>",
+    author="westonplatter",
+    author_email="westonplatter@gmail.com",
     description=DESCRIPTION,
-    long_description_content_type='text/markdown',
+    long_description_content_type="text/markdown",
     long_description=README,
     url=URL,
-    license='MIT',
+    license="MIT",
     packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
-    install_requires=['matplotlib', 
-                      'pandas', 
-                      'numpy',
-                      'seaborn',
-                      'yfinance'],
-    keywords=['python', 
-              'options', 
-              'finance', 
-              'opstrat', 
-              'data visualization', 
-              'stock market'],
-    classifiers=[
-            "Development Status :: 1 - Planning",
-            "Intended Audience :: Developers",
-            "Intended Audience :: Education",
-            "Intended Audience :: Science/Research",
-            "Intended Audience :: Financial and Insurance Industry",
-            "License :: OSI Approved :: MIT License",
-            "Natural Language :: English",
-            "Operating System :: OS Independent",
-            "Topic :: Scientific/Engineering :: Visualization",
-            'Topic :: Scientific/Engineering :: Information Analysis',
-            "Topic :: Office/Business :: Financial :: Investment",
-            "Topic :: Office/Business :: Financial",
-            "Programming Language :: Python :: 3"]
+    install_requires=deps,
 )
-
-#Display README.md in PYPI
-#https://stackoverflow.com/questions/26737222/how-to-make-pypi-description-markdown-work
-
